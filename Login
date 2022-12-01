@@ -1,0 +1,6 @@
+CREATE TABLE Users (
+    PersonID int,
+    DUsername varchar(255),
+    DPassword varchar(255),
+    EmailUser varchar(255),
+);

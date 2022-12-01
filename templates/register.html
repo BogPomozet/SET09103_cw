@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-sacle=1.0">
+        <title>PETRY</title>
+    
+        <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    
+        <!-- font awesome cdn link  -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+        <!-- Template Stylesheet -->
+        <link href="{{url_for('static', filename='css/register.css')}}" rel="stylesheet"></head>
+    <body>
+        <!-- <div id = "mainbreak"></div>
+        <div class="container">
+            <div class="content">
+            <h2>Rgister</h2>
+
+            <form class="form" method="POST">
+            <input class="form-contol" placeholder="Uername" name="DUsername" class="box">
+            </br>
+            <input class="form-contol" placeholder="Password" name="DPassword" type="Password" class="box">
+            </br>
+            <input class="form-contol" placeholder="Email" name="EmailUser" class="box">
+            </br>
+            <input class="btn" type="submit" value="login now">
+            </form>
+        </div>
+        </div> -->
+
+        <form class="registration" method="POST">
+            <h1>👋 Welcome!</h1>
+          
+            <label class="pure-material-textfield-outlined">
+               <input placeholder=" " name="EmailUser" " required>
+                <span>Email</span>
+            </label>
+
+            <label class="pure-material-textfield-outlined">
+                <input placeholder=" " name="DUsername"  required>
+                 <span>Username</span>
+             </label>
+          
+            <label class="pure-material-textfield-outlined">
+              <input placeholder=" " name="DPassword" type="Password" required>
+              <span>Password</span>
+            </label>
+        
+          
+            <label class="pure-material-checkbox">
+              <input type="checkbox" required>
+              <span>I agree to the <a href="https://codepen.io/collection/nZKBZe/" target="_blank" title="Actually not a Terms of Service">Terms of Service</a></span>
+            </label>
+          
+            <button class="pure-material-button-contained" type="submit" value="login now">Sign Up</button>
+          
+            <div class="done">
+              <h1>👌 You're all set!</h1>
+              <a class="pure-material-button-text" href="javascript:window.location.reload(true)">Again</a>
+            </div>
+            <div class="progress">
+              <progress class="pure-material-progress-circular" />
+            </div>
+          </form>
+          
+    </body> 
+</html>
