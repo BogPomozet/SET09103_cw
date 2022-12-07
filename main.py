@@ -17,14 +17,12 @@ def index():
 def checklogin():
     UN = request.form['Username']
     PW = request.form['Password']
-
     sqlconnection = sqlite3.Connection(currentlocation + "\Login")
     cursor = sqlconnection.cursor()
-    query1 = "SELECT Username, Password From Users WHERE Username = '{un}' AND Password = '{pw}'".format(un = UN, pw = PW)
-
-    rows = cursor.execute(query1)
-    rows = rows.fetchall()
-    if len(rows) == 1:
+    query1="SELECT * FROM Users WHERE Username='{un}' AND Password='{pw}'".format(un=UN, pw=PW)
+    cursor.execute(query1)
+    results=cursor.fetchall()
+    if len(results) ==1:
         return render_template("loggedin.html")
     else:
         return redirect("/register")
@@ -35,7 +33,6 @@ def registerpage():
         dUN = request.form['DUsername']
         dPW = request.form['DPassword']
         Uemail = request.form['EmailUser']
-
         sqlconnection = sqlite3.Connection(currentlocation + "\Login")
         cursor = sqlconnection.cursor()
         query1 = "INSERT INTO Users VALUES('{u}','{p}','{e}')".format( u=dUN, p=dPW, e=Uemail)
@@ -44,6 +41,17 @@ def registerpage():
         return redirect("/")
     return render_template("register.html")
 
+@app.route("/recepies/")
+def recepieBook(): 
+    return render_template("recepies.html")
+
+@app.route("/forum/")
+def forum(): 
+    return render_template("forum.html")
+
+@app.route("/blog/")
+def blog():
+    return render_template("blogExample.html")
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)

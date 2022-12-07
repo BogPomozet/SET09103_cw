@@ -1,0 +1,228 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-sacle=1.0">
+    <title>PETRY </title>
+    <link rel="icon" href="{{url_for('static', filename='img/pet-food.png')}}">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Template Stylesheet -->
+    <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- header section starts  -->
+
+    <header class="header">
+
+        <a href="/" class="logo"><img src="{{url_for('static', filename='img/pet-food.png')}}" width="50" height="50">
+            PETRY </a>
+
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#features">Recepie Book</a>
+            <a href="/forum">Forum</a>
+            <a href="#categories">Breeds</a>
+            <a href="#review">review</a>
+            <a href="#blogs">blogs</a>
+
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-user" id="login-btn"></div>
+        </div>
+
+        
+        <form method="POST" action="" class="search-form">
+            <input id="search-box"  name="searched">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+
+        <form method="POST" class="login-form">
+            <h3>login now</h3>
+            <input type="email" placeholder="your email" class="box">
+            <input type="password" placeholder="your password" class="box">
+            <p>forget your password <a href="#">click here</a></p>
+            <p>don't have an account <a href="/register">create now</a></p>
+            <input type="submit" value="login now" class="btn">
+        </form>
+
+    </header>
+
+    <!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="content">
+        <h3><span>fresh</span> and <span>organic</span> meal for your beloved animal</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam libero nostrum veniam facere tempore nisi.</p>
+       
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- recepie section starts  -->
+
+<section class="features" id="features">
+
+    <h1 class="heading"> for <span>dogs</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="{{url_for('static', filename='img/ckickenrice.jpg')}}" alt="">
+            <h3>Chicken and Rice</h3>
+            <p><li>1/4 pound of cooked, skinless chicken</li>
+                <li>1 cup of peas and carrots</li>
+                <li>1 tablespoon of vegetable oil</li>
+                <li>1/4 teaspoon of potassium chloride</li></p>
+                <br>
+                <br>
+                <br>
+                <br>
+            <a href="#" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+            <img src="{{url_for('static', filename='img/turkey.png')}}" alt="">
+            <h3>Turkey and Vegetable Dinner</h3>
+            <p><li>1 pound turkey meat</li>
+                <li>1 cup of cooked brown or white rice</li>
+                <li>1/2 cup of green beans</li>
+                <li>1/2 cup of carrots</li>
+                <li>1/4 cup of water</li>
+                <li>1-2 tablespoon vegetable oil</li></p>
+                <br>
+                
+            <a href="#" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+            <img src="{{url_for('static', filename='img/biscuits.jpg')}}" alt="">
+            <h3>Basic Dog Biscuits</h3>
+            <p><li>2.5 cups of whole wheat flour (or oats if your dog is sensitive to wheat)</li>
+                <li>1 tablespoon of salt</li>
+                <li>1 egg</li>
+                <li>1 tablespoon of beef or chicken broth or bouillon</li>
+                <li>1/2 cup of hot water!</li></p>
+            <a href="#" class="btn">read more</a>
+        </div>
+
+    </div>
+
+    <h1 class="heading"> for <span>cats</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="{{url_for('static', filename='img/ckickenrice.jpg')}}" alt="">
+            <h3>Chicken and Rice</h3>
+            <p><li>1/4 pound of cooked, skinless chicken</li>
+                <li>1 cup of peas and carrots</li>
+                <li>1 tablespoon of vegetable oil</li>
+                <li>1/4 teaspoon of potassium chloride</li></p>
+                <br>
+                <br>
+                <br>
+                <br>
+            <a href="#" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+            <img src="{{url_for('static', filename='img/turkey.png')}}" alt="">
+            <h3>Turkey and Vegetable Dinner</h3>
+            <p><li>1 pound turkey meat</li>
+                <li>1 cup of cooked brown or white rice</li>
+                <li>1/2 cup of green beans</li>
+                <li>1/2 cup of carrots</li>
+                <li>1/4 cup of water</li>
+                <li>1-2 tablespoon vegetable oil</li></p>
+                <br>
+                
+            <a href="#" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+            <img src="{{url_for('static', filename='img/biscuits.jpg')}}" alt="">
+            <h3>Basic Dog Biscuits</h3>
+            <p><li>2.5 cups of whole wheat flour (or oats if your dog is sensitive to wheat)</li>
+                <li>1 tablespoon of salt</li>
+                <li>1 egg</li>
+                <li>1 tablespoon of beef or chicken broth or bouillon</li>
+                <li>1/2 cup of hot water!</li></p>
+            <a href="#" class="btn">read more</a>
+        </div>
+
+    </div>
+
+    <h1 class="heading"> for <span>birds</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="{{url_for('static', filename='img/ckickenrice.jpg')}}" alt="">
+            <h3>Chicken and Rice</h3>
+            <p><li>1/4 pound of cooked, skinless chicken</li>
+                <li>1 cup of peas and carrots</li>
+                <li>1 tablespoon of vegetable oil</li>
+                <li>1/4 teaspoon of potassium chloride</li></p>
+                <br>
+                <br>
+                <br>
+                <br>
+            <a href="#" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+            <img src="{{url_for('static', filename='img/turkey.png')}}" alt="">
+            <h3>Turkey and Vegetable Dinner</h3>
+            <p><li>1 pound turkey meat</li>
+                <li>1 cup of cooked brown or white rice</li>
+                <li>1/2 cup of green beans</li>
+                <li>1/2 cup of carrots</li>
+                <li>1/4 cup of water</li>
+                <li>1-2 tablespoon vegetable oil</li></p>
+                <br>
+                
+            <a href="#" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+            <img src="{{url_for('static', filename='img/biscuits.jpg')}}" alt="">
+            <h3>Basic Dog Biscuits</h3>
+            <p><li>2.5 cups of whole wheat flour (or oats if your dog is sensitive to wheat)</li>
+                <li>1 tablespoon of salt</li>
+                <li>1 egg</li>
+                <li>1 tablespoon of beef or chicken broth or bouillon</li>
+                <li>1/2 cup of hot water!</li></p>
+            <a href="#" class="btn">read more</a>
+        </div>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- custom js file link  -->
+<script src="{{url_for('static', filename='index.js')}}"></script>
+
+
+
+</body>
+
+</html>

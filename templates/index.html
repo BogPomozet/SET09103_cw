@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-sacle=1.0">
-    <title>PETRY</title>
+    <title>PETRY </title>
+    <link rel="icon" href="{{url_for('static', filename='img/pet-food.png')}}">
 
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
@@ -31,7 +32,7 @@
         <nav class="navbar">
             <a href="#home">home</a>
             <a href="#features">Recepie Book</a>
-            <a href="#products">Forum</a>
+            <a href="/forum">Forum</a>
             <a href="#categories">Breeds</a>
             <a href="#review">review</a>
             <a href="#blogs">blogs</a>
@@ -44,13 +45,13 @@
             <div class="fas fa-user" id="login-btn"></div>
         </div>
 
-        <form method="" action="" class="search-form">
         
+        <form method="POST" action="" class="search-form">
             <input id="search-box"  name="searched">
             <label for="search-box" class="fas fa-search"></label>
         </form>
 
-        <form method="" class="login-form">
+        <form method="POST" class="login-form">
             <h3>login now</h3>
             <input type="email" placeholder="your email" class="box">
             <input type="password" placeholder="your password" class="box">
@@ -63,21 +64,21 @@
 
     <!-- header section ends -->
 
-    !-- home section starts  -->
+<!-- home section starts  -->
 
 <section class="home" id="home">
 
     <div class="content">
-        <h3>fresh and <span>organic</span> meal for your loveley animal</h3>
+        <h3><span>fresh</span> and <span>organic</span> meal for your beloved animal</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam libero nostrum veniam facere tempore nisi.</p>
-        <a href="#" class="btn">Make Now</a>
+        <a href="{{url_for('recepieBook')}}" class="btn">Make Now</a>
     </div>
 
 </section>
 
 <!-- home section ends -->
 
-<!-- features section starts  -->
+<!-- recepie section starts  -->
 
 <section class="features" id="features">
 
@@ -86,23 +87,41 @@
     <div class="box-container">
 
         <div class="box">
-            <img src="image/feature-img-1.png" alt="">
-            <h3>fresh and organic</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, earum!</p>
+            <img src="{{url_for('static', filename='img/ckickenrice.jpg')}}" alt="">
+            <h3>Chicken and Rice</h3>
+            <p><li>1/4 pound of cooked, skinless chicken</li>
+                <li>1 cup of peas and carrots</li>
+                <li>1 tablespoon of vegetable oil</li>
+                <li>1/4 teaspoon of potassium chloride</li></p>
+                <br>
+                <br>
+                <br>
+                <br>
             <a href="#" class="btn">read more</a>
         </div>
 
         <div class="box">
-            <img src="image/feature-img-2.png" alt="">
-            <h3>free delivery</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, earum!</p>
+            <img src="{{url_for('static', filename='img/turkey.png')}}" alt="">
+            <h3>Turkey and Vegetable Dinner</h3>
+            <p><li>1 pound turkey meat</li>
+                <li>1 cup of cooked brown or white rice</li>
+                <li>1/2 cup of green beans</li>
+                <li>1/2 cup of carrots</li>
+                <li>1/4 cup of water</li>
+                <li>1-2 tablespoon vegetable oil</li></p>
+                <br>
+                
             <a href="#" class="btn">read more</a>
         </div>
 
         <div class="box">
-            <img src="image/feature-img-3.png" alt="">
-            <h3>easy payments</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, earum!</p>
+            <img src="{{url_for('static', filename='img/biscuits.jpg')}}" alt="">
+            <h3>Basic Dog Biscuits</h3>
+            <p><li>2.5 cups of whole wheat flour (or oats if your dog is sensitive to wheat)</li>
+                <li>1 tablespoon of salt</li>
+                <li>1 egg</li>
+                <li>1 tablespoon of beef or chicken broth or bouillon</li>
+                <li>1/2 cup of hot water!</li></p>
             <a href="#" class="btn">read more</a>
         </div>
 
@@ -121,31 +140,27 @@
     <div class="box-container">
 
         <div class="box">
-            <img src="image/cat-1.png" alt="">
+            <img src="{{url_for('static', filename='img/dog.png')}}" alt="">
             <h3>dogs</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia labore error quae voluptatem non ex reiciendis cum explicabo facilis earum? At explicabo in id laboriosam non incidunt eligendi quisquam. Enim!</p>
             <a href="#" class="btn">Find out more</a>
         </div>
 
         <div class="box">
-            <img src="image/cat-2.png" alt="">
+            <img src="{{url_for('static', filename='img/cat.png')}}" alt="">
             <h3>cats</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid odio exercitationem quasi ad doloribus aperiam enim, corrupti aspernatur tenetur facilis consectetur magni similique quae in dolorum suscipit voluptatum nam culpa.</p>
             <a href="#" class="btn">Find out more</a>
         </div>
 
         <div class="box">
-            <img src="image/cat-3.png" alt="">
+            <img src="{{url_for('static', filename='img/rat.png')}}" alt="">
             <h3>mice</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, eum delectus dolorum ex voluptatibus sunt eaque numquam, ducimus beatae repellendus inventore voluptate officiis explicabo quam rem. Quod velit iure molestiae!</p>
             <a href="#" class="btn">Find out more</a>
         </div>
 
         <div class="box">
-            <img src="image/cat-4.png" alt="">
+            <img src="{{url_for('static', filename='img/bird.png')}}" alt="">
             <h3>birds</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti saepe quae similique sint, est qui quo veniam nemo eligendi voluptatibus aliquam soluta officiis minus dolorem quod cumque consequatur recusandae itaque?</p>
-            <a href="#" class="btn">Find out more</a>
+           <a href="#" class="btn">Find out more</a>
         </div>
 
     </div>
@@ -163,39 +178,39 @@
     <div class="box-container">
 
         <div class="box">
-            <img src="image/blog-1.jpg" alt="">
+            <img src="{{url_for('static', filename='img/blog1.jpg')}}" alt="">
             <div class="content">
                 <div class="icons">
                     <a href="#"> <i class="fas fa-user"></i> by user </a>
                     <a href="#"> <i class="fas fa-calendar"></i> 1st may, 2021 </a>
                 </div>
-                <h3>fresh and organic vegitables and fruits</h3>
+                <h3>How dogs contribute to your health and happiness</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, expedita.</p>
                 <a href="#" class="btn">read more</a>
             </div>
         </div>
 
         <div class="box">
-            <img src="image/blog-2.jpg" alt="">
+            <img src="{{url_for('static', filename='img/blog2.jpg')}}" alt="">
             <div class="content">
                 <div class="icons">
                     <a href="#"> <i class="fas fa-user"></i> by user </a>
                     <a href="#"> <i class="fas fa-calendar"></i> 1st may, 2021 </a>
                 </div>
-                <h3>fresh and organic vegitables and fruits</h3>
+                <h3>Cats first bonded with humans after invention of farming</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, expedita.</p>
                 <a href="#" class="btn">read more</a>
             </div>
         </div>
 
         <div class="box">
-            <img src="image/blog-3.jpg" alt="">
+            <img src="{{url_for('static', filename='img/blog3.jpg')}}" alt="">
             <div class="content">
                 <div class="icons">
                     <a href="#"> <i class="fas fa-user"></i> by user </a>
                     <a href="#"> <i class="fas fa-calendar"></i> 1st may, 2021 </a>
                 </div>
-                <h3>fresh and organic vegitables and fruits</h3>
+                <h3>What brand of food is safe for your pet?</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, expedita.</p>
                 <a href="#" class="btn">read more</a>
             </div>
@@ -214,7 +229,7 @@
     <div class="box-container">
 
         <div class="box">
-            <h3> groco <i class="fas fa-shopping-basket"></i> </h3>
+            <h3> Petri <i class="fas fa-cat"></i> </h3>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, saepe.</p>
             <div class="share">
                 <a href="#" class="fab fa-facebook-f"></a>
@@ -224,22 +239,22 @@
             </div>
         </div>
 
-        <div class="box">
+        <!-- <div class="box">
             <h3>contact info</h3>
             <a href="#" class="links"> <i class="fas fa-phone"></i> +123-456-7890 </a>
             <a href="#" class="links"> <i class="fas fa-phone"></i> +111-222-3333 </a>
             <a href="#" class="links"> <i class="fas fa-envelope"></i> shaikhanas@gmail.com </a>
             <a href="#" class="links"> <i class="fas fa-map-marker-alt"></i> mumbai, india - 400104 </a>
-        </div>
+        </div> -->
 
         <div class="box">
             <h3>quick links</h3>
-            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> home </a>
-            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> features </a>
-            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> products </a>
-            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> categories </a>
-            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> review </a>
-            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> blogs </a>
+            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> Forum </a>
+            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> About Us </a>
+            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> Recepie Book </a>
+            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> Breeds </a>
+            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> FQA </a>
+            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> Blogs </a>
         </div>
 
         <div class="box">
@@ -247,18 +262,16 @@
             <p>subscribe for latest updates</p>
             <input type="email" placeholder="your email" class="email">
             <input type="submit" value="subscribe" class="btn">
-            <img src="image/payment.png" class="payment-img" alt="">
         </div>
 
     </div>
 
-    <div class="credit"> created by <span> mr. web designer </span> | all rights reserved </div>
+    
 
 </section>
 
 <!-- footer section ends -->
 
-<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
 <!-- custom js file link  -->
 <script src="{{url_for('static', filename='index.js')}}"></script>
