@@ -1,5 +1,4 @@
-/* Material Customization */
-:root {
+/* Material Customization */:root {
     --pure-material-primary-rgb: 255, 191, 0;
     --pure-material-onsurface-rgb: 0, 0, 0;
 }
@@ -28,7 +27,7 @@ h1 {
     text-align: center;
 }
 
-.registration > label {
+.registration>label {
     display: block;
     margin: 24px 0;
     width: 320px;
@@ -67,11 +66,11 @@ button {
     transition: visibility 0s 1s;
 }
 
-.signed > .done {
+.signed>.done {
     visibility: visible;
 }
 
-.done > a {
+.done>a {
     display: inline-block;
     text-decoration: none;
 }
@@ -80,7 +79,7 @@ button {
     opacity: 0;
 }
 
-.signed > .progress {
+.signed>.progress {
     animation: loading 4s;
 }
 
@@ -88,15 +87,19 @@ button {
     0% {
         visibility: visible;
     }
+
     12.5% {
         opacity: 0;
     }
+
     25% {
         opacity: 1;
     }
+
     87.5% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
     }
@@ -127,12 +130,12 @@ button {
     text-align: right;
 }
 
-.left-footer > a,
-.right-footer > a {
+.left-footer>a,
+.right-footer>a {
     color: black;
 }
 
-.left-footer > a:hover,
-.right-footer > a:hover {
+.left-footer>a:hover,
+.right-footer>a:hover {
     text-decoration: underline;
 }
